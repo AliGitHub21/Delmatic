@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="selected-slice-info">
+    <div class="hex-code">
+      <p class="style">{{ heading }}</p>
+      <br />
+      <div>
+        <p *ngIf="show" class="style-value">Hex Code: {{ color }}</p>
+      </div>
+    </div>
+    <div
+      *ngIf="show"
+      class="selectedColour"
+      [ngStyle]="{ background: color }"
+    ></div>
+  </div>
+
+  <div class="wheel-shape-block block">
+    <ul class="wheel-shape">
+      <li *ngFor="let paint of colourList">
+        <div
+          (click)="changeColor(paint)"
+          [ngStyle]="{ background: paint }"
+          class="slice"
+        ></div>
+      </li>
+      <div class="inner"></div>
+    </ul>
+  </div>
+</div>
