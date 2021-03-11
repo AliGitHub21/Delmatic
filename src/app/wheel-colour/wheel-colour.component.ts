@@ -18,8 +18,6 @@ export class WheelColourComponent implements OnInit {
 
   constructor(public sharedService: SharedService) { }
 
-
-  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.getColourList();
   }
@@ -28,10 +26,6 @@ export class WheelColourComponent implements OnInit {
     this.sharedService.getColours().then(colourList => this.colourList = colourList);
   }
 
-  /**
-   * Change color from default colors
-   * @param {string} color
-   */
   public changeColor(color: string): void {
     this.color = color;
     this.event.emit(this.color);

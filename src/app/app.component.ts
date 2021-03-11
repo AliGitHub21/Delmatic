@@ -9,12 +9,7 @@ export class AppComponent {
 
   public backgroundColor = '#fff';
 
-  /**
-   * Set color from color picker
-   * @param {string} color
-   */
- 
-  public setColor(color: string) {
+  public SetColor(color: string) {
     this.backgroundColor = color;
   }
 }
