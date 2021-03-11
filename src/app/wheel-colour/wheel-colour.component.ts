@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output , OnInit} from '@angular/core';
-import {SharedService} from '../Shared/shared.service'
+import {SharedService} from '../Shared/shared.service';
 
 @Component({
   selector: 'app-wheel-colour',
@@ -8,17 +8,18 @@ import {SharedService} from '../Shared/shared.service'
 })
 export class WheelColourComponent implements OnInit {
 
-  @Input() color: string = '';
+  @Input() color = '';
   @Output() event: EventEmitter<string> = new EventEmitter<string>();
 
-  public heading:string = 'Select a colour';
+  public heading = 'Select a colour';
   public show = false;
-  public colourList:string[]=[];
+  public colourList: string[] = [];
 
 
   constructor(public sharedService: SharedService) { }
 
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.getColourList();
   }
@@ -35,7 +36,7 @@ export class WheelColourComponent implements OnInit {
     this.color = color;
     this.event.emit(this.color);
     this.show = true;
-    this.heading = 'Selected Colour'
+    this.heading = 'Selected Colour';
   }
 
 }

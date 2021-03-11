@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public backgroundColor: string = '#fff';
+  public backgroundColor = '#fff';
 
   /**
    * Set color from color picker
    * @param {string} color
    */
+ 
   public setColor(color: string) {
-    debugger;
     this.backgroundColor = color;
   }
 }
