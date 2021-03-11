@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SharedService} from '../app/Shared/shared.service'
+import {SharedService} from '../app/Shared/shared.service';
 
 @Component({
   selector: 'app-root',
