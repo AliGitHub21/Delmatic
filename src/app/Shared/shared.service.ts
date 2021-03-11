@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { ColourList } from './Constants/ColourList';
 
@@ -11,4 +12,5 @@ export class SharedService {
   getColours(): Promise<string[]> {
     return Promise.resolve(ColourList);
   }
+
 }
